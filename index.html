@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Happy Birthday Khusi! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <!-- Initial Dark Screen -->
+        <div id="dark-screen" class="section active">
+            <button id="light-switch" class="light-button">Turn on the Light</button>
+            <div class="light-bulbs-container">
+                <div class="light-bulb blue"></div>
+                <div class="light-bulb green"></div>
+                <div class="light-bulb pink"></div>
+                <div class="light-bulb red"></div>
+                <div class="light-bulb yellow"></div>
+                <div class="light-bulb orange"></div>
+            </div>
+            <audio id="birthdaySong" src="hbdsong.mp3" preload="auto"></audio>
+        </div>
+
+        <!-- Birthday Wish Section -->
+        <div id="birthday-wish" class="section">
+            <h1 class="birthday-text animate__animated">Happy Birthday, Khusi! 🎉🎂</h1>
+        </div>
+
+        <!-- Birthday Card Section -->
+        <div id="birthday-card" class="section">
+            <canvas id="fireworksCanvas"></canvas>
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="shooting-stars"></div>
+            <div class="balloons"></div>
+            <div class="confetti-container"></div>
+            
+            <div class="container">
+                <h1 class="title">Happy Birthday!</h1>
+                <div class="birthday-card">
+                    <div class="card-celebration"></div>
+                    <h2 class="friend-name">Khusi</h2>
+                    <p class="message">
+                        My Dear Best Friend,<br><br>
+                        On this special day, I want to celebrate you and all the joy you bring to my life. 
+                        Your friendship means the world to me, and I'm so grateful to have you in my life.<br><br>
+                        May your day be filled with laughter, love, and all the things that make you happy. 
+                        Here's to another amazing year ahead!<br><br>
+                        With lots of love,<br>
+                        Your Best Friend
+                    </p>
+                    <button class="cake-button">Here is your Birthday Cake! 🎂</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cake Section -->
+        <div id="cake-section" class="section">
+            <div class="cake-message animate__animated">
+                <h2 class="cake-title">Here's a cake just for you, Khusi! 🎂</h2>
+            </div>
+            <div class="cake-container">
+                <div class="cake-image-container">
+                    <img src="cake2.jpeg" alt="Birthday Cake" class="cake-image animate__animated" style="width: 200%; height: 100%;" padding: 0;>
+                </div>
+                <button class="surprise-button">Here's a Surprise for You! 🎁</button>
+            </div>
+        </div>
+
+        <!-- Notes Section -->
+        <div id="notes-section" class="section">
+            <div class="notes-container">
+                <!-- Notes will be added dynamically via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Surprise Questions Section -->
+        <div id="questions-section" class="section">
+            <div class="questions-intro">
+                <h2 class="question-title">First, Answer Some Questions! 🤔</h2>
+                <p class="question-subtitle">Let's see how well you know our friendship...</p>
+                <button class="okay-btn">Okay, Let's Start! 👍</button>
+            </div>
+            <div class="questions-container">
+                <!-- Questions will be added dynamically via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Friendship Message Section -->
+        <div id="friendship-message-section" class="section">
+            <h2 class="friendship-praise animate__animated">Wow, you know me so well! Our friendship is truly special. ✨ Thanks for being the amazing friend you are!</h2>
+            <button id="proceed-to-memories-btn" class="next-step-button">Here is your Surprise🎁</button>
+        </div>
+
+        <!-- Ready Check Section -->
+        <div id="ready-check-section" class="section">
+            <h2 class="ready-question animate__animated">Are u ready?</h2>
+            <button id="ready-btn" class="next-step-button">Yeah I'm so excited</button>
+        </div>
+
+        <!-- Chand Face Question Section -->
+        <div id="chand-face-section" class="section">
+            <h2 class="chand-question animate__animated">You know, if the moon ("chand") had a face, what do you think it would look like? </h2>
+            <h3 class="chand-question animate__animated">Want to know? 😉</h3>
+            <button id="show-chand-btn" class="next-step-button">Yes!</button>
+        </div>
+
+        <!-- Chand Reveal Section -->
+        <div id="chand-reveal-section" class="section">
+            <div class="image-reveal-container">
+                <img id="revealed-image" src="" alt="Chand Face Reveal" style="display: none; opacity: 0;">
+            </div>
+            <!-- Content removed, will be handled by JS transition -->
+        </div>
+
+        <!-- Memories Intro Section -->
+        <div id="memories-intro-section" class="section">
+            <p class="reveal-friendship-text animate__animated">This is just a glimpse of how bright you shine in my life! Let's look back at some of our amazing moments together.</p>
+            <button id="proceed-to-memories-final-btn" class="next-step-button animate__animated">See Our Memories Together 💌</button>
+        </div>
+
+        <!-- Single Memory Section -->
+        <div id="single-memory-section" class="section">
+            <img id="single-memory-image" src="memory.jpeg" alt="Our Special Memory" class="animate__animated">
+            <button id="proceed-to-counter-btn" class="next-step-button animate__animated">See Our Friendship Timeline ⏳</button>
+        </div>
+
+        <!-- Friendship Counter Section -->
+        <div id="counter-section" class="section">
+            <h2>Our Friendship Timeline 💌</h2>
+            <div class="counter-container">
+                <div class="counter-item">
+                    <span id="days">0</span>
+                    <span>Days</span>
+                </div>
+                <div class="counter-item">
+                    <span id="hours">0</span>
+                    <span>Hours</span>
+                </div>
+                <div class="counter-item">
+                    <span id="minutes">0</span>
+                    <span>Minutes</span>
+                </div>
+                <div class="counter-item">
+                    <span id="seconds">0</span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
