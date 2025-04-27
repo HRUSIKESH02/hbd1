@@ -190,7 +190,7 @@ body.light-mode {
 }
 
 /* Add celebration effects */
-.celebration-effect {
+/* .celebration-effect {
     position: fixed;
     pointer-events: none;
     z-index: 999;
@@ -233,7 +233,7 @@ body.light-mode {
         transform: scale(30);
         opacity: 0;
     }
-}
+} */
 
 /* Cake Styles */
 .cake-container {
