@@ -207,38 +207,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Function to launch the rocket
-// function launchRocket() {
-//     // Create rocket container
-//     const rocketContainer = document.createElement('div');
-//     rocketContainer.className = 'rocket-container';
-//     document.body.appendChild(rocketContainer);
+function launchRocket() {
+    // Create rocket container
+    const rocketContainer = document.createElement('div');
+    rocketContainer.className = 'rocket-container';
+    document.body.appendChild(rocketContainer);
     
-//     // Create rocket
-//     const rocket = document.createElement('div');
-//     rocket.className = 'rocket';
-//     rocketContainer.appendChild(rocket);
+    // Create rocket
+    const rocket = document.createElement('div');
+    rocket.className = 'rocket';
+    rocketContainer.appendChild(rocket);
     
-//     // Create rocket trail
-//     const rocketTrail = document.createElement('div');
-//     rocketTrail.className = 'rocket-trail';
-//     rocketContainer.appendChild(rocketTrail);
+    // Create rocket trail
+    const rocketTrail = document.createElement('div');
+    rocketTrail.className = 'rocket-trail';
+    rocketContainer.appendChild(rocketTrail);
     
-//     // Make rocket visible
-//     setTimeout(() => {
-//         rocketContainer.style.opacity = '1';
+    // Make rocket visible
+    setTimeout(() => {
+        rocketContainer.style.opacity = '1';
         
-//         // After rocket animation completes, create fireworks
-//         setTimeout(() => {
-//             // Create multiple firework bursts
-//             const colors = [
-//                 '#ff4444', // Red
-//                 '#ffeb3b', // Yellow
-//                 '#ff9800', // Orange
-//                 '#4caf50', // Green
-//                 '#2196f3', // Blue
-//                 '#e91e63', // Pink
-//                 '#9c27b0'  // Purple
-//             ];
+        // After rocket animation completes, create fireworks
+        setTimeout(() => {
+            // Create multiple firework bursts
+            const colors = [
+                '#ff4444', // Red
+                '#ffeb3b', // Yellow
+                '#ff9800', // Orange
+                '#4caf50', // Green
+                '#2196f3', // Blue
+                '#e91e63', // Pink
+                '#9c27b0'  // Purple
+            ];
             
             // function createFireworkBurst(x, y, color) {
             //     const burst = document.createElement('div');
