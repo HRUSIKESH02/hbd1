@@ -207,38 +207,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Function to launch the rocket
-function launchRocket() {
-    // Create rocket container
-    const rocketContainer = document.createElement('div');
-    rocketContainer.className = 'rocket-container';
-    document.body.appendChild(rocketContainer);
+// function launchRocket() {
+//     // Create rocket container
+//     const rocketContainer = document.createElement('div');
+//     rocketContainer.className = 'rocket-container';
+//     document.body.appendChild(rocketContainer);
     
-    // Create rocket
-    const rocket = document.createElement('div');
-    rocket.className = 'rocket';
-    rocketContainer.appendChild(rocket);
+//     // Create rocket
+//     const rocket = document.createElement('div');
+//     rocket.className = 'rocket';
+//     rocketContainer.appendChild(rocket);
     
-    // Create rocket trail
-    const rocketTrail = document.createElement('div');
-    rocketTrail.className = 'rocket-trail';
-    rocketContainer.appendChild(rocketTrail);
+//     // Create rocket trail
+//     const rocketTrail = document.createElement('div');
+//     rocketTrail.className = 'rocket-trail';
+//     rocketContainer.appendChild(rocketTrail);
     
-    // Make rocket visible
-    setTimeout(() => {
-        rocketContainer.style.opacity = '1';
+//     // Make rocket visible
+//     setTimeout(() => {
+//         rocketContainer.style.opacity = '1';
         
-        // After rocket animation completes, create fireworks
-        setTimeout(() => {
-            // Create multiple firework bursts
-            const colors = [
-                '#ff4444', // Red
-                '#ffeb3b', // Yellow
-                '#ff9800', // Orange
-                '#4caf50', // Green
-                '#2196f3', // Blue
-                '#e91e63', // Pink
-                '#9c27b0'  // Purple
-            ];
+//         // After rocket animation completes, create fireworks
+//         setTimeout(() => {
+//             // Create multiple firework bursts
+//             const colors = [
+//                 '#ff4444', // Red
+//                 '#ffeb3b', // Yellow
+//                 '#ff9800', // Orange
+//                 '#4caf50', // Green
+//                 '#2196f3', // Blue
+//                 '#e91e63', // Pink
+//                 '#9c27b0'  // Purple
+//             ];
             
             // function createFireworkBurst(x, y, color) {
             //     const burst = document.createElement('div');
@@ -396,41 +396,41 @@ function showBirthdayWish() {
 }
 
 // Create sparkles around an element
-function createSparkles(element) {
-    const sparkleCount = 20;
-    const rect = element.getBoundingClientRect();
+// function createSparkles(element) {
+//     const sparkleCount = 20;
+//     const rect = element.getBoundingClientRect();
     
-    for (let i = 0; i < sparkleCount; i++) {
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        sparkle.style.position = 'absolute';
-        sparkle.style.width = '10px';
-        sparkle.style.height = '10px';
-        sparkle.style.backgroundColor = '#ffeb3b';
-        sparkle.style.borderRadius = '50%';
-        sparkle.style.boxShadow = '0 0 10px #ffeb3b, 0 0 20px #ffeb3b';
-        sparkle.style.left = Math.random() * rect.width + 'px';
-        sparkle.style.top = Math.random() * rect.height + 'px';
-        sparkle.style.opacity = '0';
-        sparkle.style.animation = `sparkle ${Math.random() * 2 + 1}s infinite`;
-        element.appendChild(sparkle);
-    }
+//     for (let i = 0; i < sparkleCount; i++) {
+//         const sparkle = document.createElement('div');
+//         sparkle.className = 'sparkle';
+//         sparkle.style.position = 'absolute';
+//         sparkle.style.width = '10px';
+//         sparkle.style.height = '10px';
+//         sparkle.style.backgroundColor = '#ffeb3b';
+//         sparkle.style.borderRadius = '50%';
+//         sparkle.style.boxShadow = '0 0 10px #ffeb3b, 0 0 20px #ffeb3b';
+//         sparkle.style.left = Math.random() * rect.width + 'px';
+//         sparkle.style.top = Math.random() * rect.height + 'px';
+//         sparkle.style.opacity = '0';
+//         sparkle.style.animation = `sparkle ${Math.random() * 2 + 1}s infinite`;
+//         element.appendChild(sparkle);
+//     }
     
-    // Add sparkle animation to CSS
-    const sparkleStyle = document.createElement('style');
-    sparkleStyle.textContent = `
-        @keyframes sparkle {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    `;
-    document.head.appendChild(sparkleStyle);
+//     // Add sparkle animation to CSS
+//     const sparkleStyle = document.createElement('style');
+//     sparkleStyle.textContent = `
+//         @keyframes sparkle {
+//             0%, 100% {
+//                 opacity: 0;
+//                 transform: scale(0);
+//             }
+//             50% {
+//                 opacity: 1;
+//                 transform: scale(1);
+//             }
+//         }
+//     `;
+//     document.head.appendChild(sparkleStyle);
 }
 
 // Show cake animation
@@ -1098,15 +1098,15 @@ function initializeBirthdayCard() {
         }
     }
 
-    function launchMultipleFireworks() {
-        const bursts = 4 + Math.floor(Math.random() * 4);
-        for (let i = 0; i < bursts; i++) {
-            const x = Math.random() * canvas.width;
-            const y = 150 + Math.random() * 200;
-            const color = `hsl(${Math.random() * 360}, 100%, 60%)`;
-            fireworks.push(new Firework(x, y, color));
-        }
-    }
+    // function launchMultipleFireworks() {
+    //     const bursts = 4 + Math.floor(Math.random() * 4);
+    //     for (let i = 0; i < bursts; i++) {
+    //         const x = Math.random() * canvas.width;
+    //         const y = 150 + Math.random() * 200;
+    //         const color = `hsl(${Math.random() * 360}, 100%, 60%)`;
+    //         fireworks.push(new Firework(x, y, color));
+    //     }
+    // }
 
     // Start the animation
     // animate(); // <--- Commented out this line to disable canvas fireworks
@@ -1127,38 +1127,38 @@ function initializeBirthdayCard() {
     rotateCard();
     
     // Create fireworks and celebration emojis
-    function createFirework() {
-        const firework = document.createElement('div');
-        firework.className = 'firework';
-        firework.style.left = `${Math.random() * 100}%`;
-        firework.style.top = `${Math.random() * 100}%`;
-        document.body.appendChild(firework);
+    // function createFirework() {
+    //     const firework = document.createElement('div');
+    //     firework.className = 'firework';
+    //     firework.style.left = `${Math.random() * 100}%`;
+    //     firework.style.top = `${Math.random() * 100}%`;
+    //     document.body.appendChild(firework);
         
-        // Create particles for the firework
-        for (let i = 0; i < 20; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'firework-particle';
-            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+    //     // Create particles for the firework
+    //     for (let i = 0; i < 20; i++) {
+    //         const particle = document.createElement('div');
+    //         particle.className = 'firework-particle';
+    //         particle.style.background = colors[Math.floor(Math.random() * colors.length)];
             
-            // Random direction for each particle
-            const angle = Math.random() * Math.PI * 2;
-            const distance = 50 + Math.random() * 100;
-            const x = Math.cos(angle) * distance;
-            const y = Math.sin(angle) * distance;
+    //         // Random direction for each particle
+    //         const angle = Math.random() * Math.PI * 2;
+    //         const distance = 50 + Math.random() * 100;
+    //         const x = Math.cos(angle) * distance;
+    //         const y = Math.sin(angle) * distance;
             
-            particle.style.setProperty('--x', `${x}px`);
-            particle.style.setProperty('--y', `${y}px`);
+    //         particle.style.setProperty('--x', `${x}px`);
+    //         particle.style.setProperty('--y', `${y}px`);
             
-            firework.appendChild(particle);
-        }
+    //         firework.appendChild(particle);
+    //     }
         
-        setTimeout(() => {
-            firework.remove();
-        }, 2000);
-    }
+    //     setTimeout(() => {
+    //         firework.remove();
+    //     }, 2000);
+    // }
     
     // Create celebration elements at intervals
-    setInterval(createFirework, 500);
+    // setInterval(createFirework, 500);
     
     // Add corner decorations
     for (let i = 0; i < 4; i++) {
@@ -1210,83 +1210,83 @@ function initializeBirthdayCard() {
     }
     
     // Create stars
-    const starsContainer = document.querySelector('.stars');
-    for (let i = 0; i < 100; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        star.style.animationDelay = `${Math.random() * 3}s`;
-        starsContainer.appendChild(star);
-    }
+    // const starsContainer = document.querySelector('.stars');
+    // for (let i = 0; i < 100; i++) {
+    //     const star = document.createElement('div');
+    //     star.className = 'star';
+    //     star.style.left = `${Math.random() * 100}%`;
+    //     star.style.top = `${Math.random() * 100}%`;
+    //     star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    //     star.style.animationDelay = `${Math.random() * 3}s`;
+    //     starsContainer.appendChild(star);
+    // }
     
-    // Create shooting stars
-    const shootingStarsContainer = document.querySelector('.shooting-stars');
-    function createShootingStar() {
-        const star = document.createElement('div');
-        star.className = 'shooting-star';
-        star.style.top = `${Math.random() * 50}%`;
-        star.style.left = `${Math.random() * 30}%`;
-        star.style.animationDuration = `${Math.random() * 2 + 2}s`;
-        shootingStarsContainer.appendChild(star);
+    // // Create shooting stars
+    // const shootingStarsContainer = document.querySelector('.shooting-stars');
+    // function createShootingStar() {
+    //     const star = document.createElement('div');
+    //     star.className = 'shooting-star';
+    //     star.style.top = `${Math.random() * 50}%`;
+    //     star.style.left = `${Math.random() * 30}%`;
+    //     star.style.animationDuration = `${Math.random() * 2 + 2}s`;
+    //     shootingStarsContainer.appendChild(star);
         
-        setTimeout(() => {
-            star.remove();
-        }, 4000);
-    }
+    //     setTimeout(() => {
+    //         star.remove();
+    //     }, 4000);
+    // }
     
-    // Create shooting stars at intervals
-    setInterval(createShootingStar, 3000);
+    // // Create shooting stars at intervals
+    // setInterval(createShootingStar, 3000);
     
-    // Create balloons
-    const balloonsContainer = document.querySelector('.balloons');
-    function createBalloon() {
-        const balloon = document.createElement('div');
-        balloon.className = 'balloon';
-        balloon.style.left = `${Math.random() * 100}%`;
-        balloon.style.animationDelay = `${Math.random() * 5}s`;
-        balloon.style.background = colors[Math.floor(Math.random() * colors.length)];
-        balloon.style.transform = `scale(${0.8 + Math.random() * 0.4})`;
-        balloonsContainer.appendChild(balloon);
+    // // Create balloons
+    // const balloonsContainer = document.querySelector('.balloons');
+    // function createBalloon() {
+    //     const balloon = document.createElement('div');
+    //     balloon.className = 'balloon';
+    //     balloon.style.left = `${Math.random() * 100}%`;
+    //     balloon.style.animationDelay = `${Math.random() * 5}s`;
+    //     balloon.style.background = colors[Math.floor(Math.random() * colors.length)];
+    //     balloon.style.transform = `scale(${0.8 + Math.random() * 0.4})`;
+    //     balloonsContainer.appendChild(balloon);
         
-        setTimeout(() => {
-            balloon.remove();
-        }, 6000);
-    }
+    //     setTimeout(() => {
+    //         balloon.remove();
+    //     }, 6000);
+    // }
     
-    // Create initial set of balloons
-    for (let i = 0; i < 15; i++) {
-        setTimeout(() => {
-            createBalloon();
-        }, i * 400);
-    }
+    // // Create initial set of balloons
+    // for (let i = 0; i < 15; i++) {
+    //     setTimeout(() => {
+    //         createBalloon();
+    //     }, i * 400);
+    // }
     
-    // Continuously create new balloons
-    setInterval(createBalloon, 1000);
+    // // Continuously create new balloons
+    // setInterval(createBalloon, 1000);
     
-    // Create confetti
-    const confettiContainer = document.querySelector('.confetti-container');
-    function createConfetti() {
-        const confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.left = `${Math.random() * 100}%`;
-        confetti.style.width = `${Math.random() * 10 + 5}px`;
-        confetti.style.height = `${Math.random() * 10 + 5}px`;
-        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        confetti.style.opacity = Math.random() * 0.5 + 0.5;
-        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+    // // Create confetti
+    // const confettiContainer = document.querySelector('.confetti-container');
+    // function createConfetti() {
+    //     const confetti = document.createElement('div');
+    //     confetti.className = 'confetti';
+    //     confetti.style.left = `${Math.random() * 100}%`;
+    //     confetti.style.width = `${Math.random() * 10 + 5}px`;
+    //     confetti.style.height = `${Math.random() * 10 + 5}px`;
+    //     confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+    //     confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    //     confetti.style.opacity = Math.random() * 0.5 + 0.5;
+    //     confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
         
-        confettiContainer.appendChild(confetti);
+    //     confettiContainer.appendChild(confetti);
         
-        setTimeout(() => {
-            confetti.remove();
-        }, 5000);
-    }
+    //     setTimeout(() => {
+    //         confetti.remove();
+    //     }, 5000);
+    // }
     
-    // Create confetti at intervals
-    setInterval(createConfetti, 300);
+    // // Create confetti at intervals
+    // setInterval(createConfetti, 300);
     
     // Add click effect to the card
     card.addEventListener('click', (event) => {
@@ -1310,23 +1310,23 @@ function initializeBirthdayCard() {
     });
     
     // Create celebration emojis
-    function createCelebrationEmoji() {
-        const emojis = ['🎊', '🎉', '🎈', '🎂', '🎁', '✨', '🌟', '💫', '🎆', '🎇'];
-        const emoji = document.createElement('div');
-        emoji.className = 'celebration-emoji';
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        emoji.style.left = `${Math.random() * 100}%`;
-        emoji.style.top = `${Math.random() * 100}%`;
-        emoji.style.fontSize = `${Math.random() * 30 + 20}px`;
-        document.body.appendChild(emoji);
+    // function createCelebrationEmoji() {
+    //     const emojis = ['🎊', '🎉', '🎈', '🎂', '🎁', '✨', '🌟', '💫', '🎆', '🎇'];
+    //     const emoji = document.createElement('div');
+    //     emoji.className = 'celebration-emoji';
+    //     emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    //     emoji.style.left = `${Math.random() * 100}%`;
+    //     emoji.style.top = `${Math.random() * 100}%`;
+    //     emoji.style.fontSize = `${Math.random() * 30 + 20}px`;
+    //     document.body.appendChild(emoji);
         
-        setTimeout(() => {
-            emoji.remove();
-        }, 3000);
-    }
+    //     setTimeout(() => {
+    //         emoji.remove();
+    //     }, 3000);
+    // }
     
-    // Create celebration emojis at intervals
-    setInterval(createCelebrationEmoji, 300);
+    // // Create celebration emojis at intervals
+    // setInterval(createCelebrationEmoji, 300);
     
     // Add background color animation
     let hue = 0;
