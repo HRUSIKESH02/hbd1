@@ -240,64 +240,64 @@ function launchRocket() {
                 '#9c27b0'  // Purple
             ];
             
-            function createFireworkBurst(x, y, color) {
-                const burst = document.createElement('div');
-                burst.className = 'firework-burst';
-                burst.style.left = x + 'px';
-                burst.style.top = y + 'px';
-                document.body.appendChild(burst);
+            // function createFireworkBurst(x, y, color) {
+            //     const burst = document.createElement('div');
+            //     burst.className = 'firework-burst';
+            //     burst.style.left = x + 'px';
+            //     burst.style.top = y + 'px';
+            //     document.body.appendChild(burst);
                 
-                // Create particles in a circular pattern
-                const particleCount = 36; // Number of particles
-                const angleStep = (2 * Math.PI) / particleCount;
+            //     // Create particles in a circular pattern
+            //     const particleCount = 36; // Number of particles
+            //     const angleStep = (2 * Math.PI) / particleCount;
                 
-                for (let i = 0; i < particleCount; i++) {
-                    const particle = document.createElement('div');
-                    particle.className = 'firework-particle';
-                    particle.style.background = `linear-gradient(to bottom, ${color} 0%, transparent 100%)`;
-                    particle.style.boxShadow = `0 0 20px ${color}`;
+            //     for (let i = 0; i < particleCount; i++) {
+            //         const particle = document.createElement('div');
+            //         particle.className = 'firework-particle';
+            //         particle.style.background = `linear-gradient(to bottom, ${color} 0%, transparent 100%)`;
+            //         particle.style.boxShadow = `0 0 20px ${color}`;
                     
-                    // Calculate particle angle and distance
-                    const angle = i * angleStep;
-                    const distance = 100 + Math.random() * 50; // Random distance between 100-150px
+            //         // Calculate particle angle and distance
+            //         const angle = i * angleStep;
+            //         const distance = 100 + Math.random() * 50; // Random distance between 100-150px
                     
-                    // Set particle properties
-                    particle.style.setProperty('--rotation', `${angle}rad`);
-                    particle.style.setProperty('--distance', `${distance}px`);
+            //         // Set particle properties
+            //         particle.style.setProperty('--rotation', `${angle}rad`);
+            //         particle.style.setProperty('--distance', `${distance}px`);
                     
-                    burst.appendChild(particle);
-                }
+            //         burst.appendChild(particle);
+            //     }
                 
                 // Create center explosion effect
-                const explosion = document.createElement('div');
-                explosion.className = 'rocket-explosion';
-                explosion.style.background = `radial-gradient(circle, ${color}80 0%, transparent 70%)`;
-                document.body.appendChild(explosion);
+            //     const explosion = document.createElement('div');
+            //     explosion.className = 'rocket-explosion';
+            //     explosion.style.background = `radial-gradient(circle, ${color}80 0%, transparent 70%)`;
+            //     document.body.appendChild(explosion);
                 
-                // Remove burst after animation
-                setTimeout(() => {
-                    burst.remove();
-                    explosion.remove();
-                }, 2000);
-            }
+            //     // Remove burst after animation
+            //     setTimeout(() => {
+            //         burst.remove();
+            //         explosion.remove();
+            //     }, 2000);
+            // }
             
             // Create multiple firework bursts with delays
-            function createFireworks() {
-                const viewportWidth = window.innerWidth;
-                const viewportHeight = window.innerHeight;
+            // function createFireworks() {
+            //     const viewportWidth = window.innerWidth;
+            //     const viewportHeight = window.innerHeight;
                 
-                for (let i = 0; i < 7; i++) {
-                    setTimeout(() => {
-                        const x = Math.random() * (viewportWidth * 0.8) + (viewportWidth * 0.1);
-                        const y = Math.random() * (viewportHeight * 0.5) + (viewportHeight * 0.1);
-                        const color = colors[i % colors.length];
-                        createFireworkBurst(x, y, color);
-                    }, i * 300); // Launch a new firework every 300ms
-                }
-            }
+            //     for (let i = 0; i < 7; i++) {
+            //         setTimeout(() => {
+            //             const x = Math.random() * (viewportWidth * 0.8) + (viewportWidth * 0.1);
+            //             const y = Math.random() * (viewportHeight * 0.5) + (viewportHeight * 0.1);
+            //             const color = colors[i % colors.length];
+            //             createFireworkBurst(x, y, color);
+            //         }, i * 300); // Launch a new firework every 300ms
+            //     }
+            // }
             
-            // Start the fireworks sequence
-            createFireworks();
+            // // Start the fireworks sequence
+            // createFireworks();
             
             // After fireworks, show birthday wish and transition to birthday card
             setTimeout(() => {
@@ -345,24 +345,24 @@ function launchRocket() {
 }
 
 // Create confetti animation with pink colors
-function createConfetti() {
-    const colors = ['#FF1493', '#FF69B4', '#FFB6C1', '#FFC0CB', '#FFE4E1', '#FFF0F5'];
-    const confetti = document.createElement('div');
-    confetti.className = 'confetti';
-    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.top = -20 + 'px';
-    confetti.style.width = Math.random() * 10 + 5 + 'px';
-    confetti.style.height = Math.random() * 10 + 5 + 'px';
-    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-    confetti.style.opacity = '1';
-    confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
-    document.body.appendChild(confetti);
+// function createConfetti() {
+//     const colors = ['#FF1493', '#FF69B4', '#FFB6C1', '#FFC0CB', '#FFE4E1', '#FFF0F5'];
+//     const confetti = document.createElement('div');
+//     confetti.className = 'confetti';
+//     confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+//     confetti.style.left = Math.random() * 100 + 'vw';
+//     confetti.style.top = -20 + 'px';
+//     confetti.style.width = Math.random() * 10 + 5 + 'px';
+//     confetti.style.height = Math.random() * 10 + 5 + 'px';
+//     confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+//     confetti.style.opacity = '1';
+//     confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+//     document.body.appendChild(confetti);
     
-    setTimeout(() => {
-        confetti.remove();
-    }, 5000);
-}
+//     setTimeout(() => {
+//         confetti.remove();
+//     }, 5000);
+// }
 
 // Add fall animation to CSS
 const style = document.createElement('style');
